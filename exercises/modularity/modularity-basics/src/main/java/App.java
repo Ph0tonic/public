@@ -4,49 +4,58 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) throws FileNotFoundException {
         compute();
     }
 
-    public static List<Double> compute() throws FileNotFoundException {
-        File file = new File("data");
-        List<Double> normalized = new ArrayList<>();
+    public static List<Double> readData(File file) throws FileNotFoundException{
+        // Read data
         Scanner scanner = new Scanner(file);
+        
         List<Double> numbers = new ArrayList<>();
         while (scanner.hasNextDouble()) {
-            double number = scanner.nextDouble();
-            numbers.add(number);
+            numbers.add(scanner.nextDouble());
         }
-        double sum = 0;
-        for (double f : numbers) {
-            sum += f;
-        }
-        double mean = sum / numbers.size();
-        double sumSquare = 0;
-        for (double f : numbers) {
-            double diff = f - mean;
-            sumSquare += diff * diff;
-        }
-        double std = Math.sqrt(sumSquare / numbers.size());
-        for (double f : numbers) {
-            normalized.add((f - mean) / std);
-        }
-        System.out.println(normalized);
+        scanner.close();
 
+        return numbers;
+    }
+
+    public static List<Double> normalize(List<Double> numbers){
+        //Compute data
+        List<Double> normalized = new ArrayList<>();
+        
+        double mean = numbers.stream().mapToDouble(d -> d).average().orElse(0.0);
+        double sumSquare = numbers.stream().mapToDouble(d -> d).map(d -> Math.pow(d-mean,2)).sum();
+        double std = Math.sqrt(sumSquare / numbers.size());
+        return numbers.stream().mapToDouble(d -> d).map(d -> (d-mean)/std).boxed().collect(Collectors.toList());
+    }
+
+    public static void writeResult(String filename, List<Double> normalized){
+        // Write result
         try {
-            FileWriter fw = new FileWriter("output");
+            FileWriter fw = new FileWriter(filename);
             for (double n : normalized) {
                 fw.write(Double.toString(n));
                 fw.write("\n");
             }
             fw.close();
         } catch (Exception e) {
-            System.out.println("Error writing output file");
+            System.err.println("Error writing output file");
         }
+    }
+
+    public static List<Double> compute() throws FileNotFoundException {
+        List<Double> numbers = readData(new File("data"));
+        List<Double> normalized = normalize(numbers);
+        System.out.println(normalized);
+
+        writeResult("output", normalized);
         System.out.println("Wrote output file.");
-        scanner.close();
+
         return normalized;
     }
 }

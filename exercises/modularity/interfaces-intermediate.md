@@ -2,20 +2,19 @@
 
 In these exercises, we will take a step back from Java and think in terms of general concepts.
 
-
 Which interface(s) do Apple, Samsung, and Nokia all have in common?
 
-- [ ] Suppliers
-- [ ] Consumers
-- [ ] Service providers
+- [x] Suppliers
+- [x] Consumers
+- [x] Service providers
 - [ ] Managers
 
 Which interface(s) do Bill Gates, Bill Clinton, and Bill Murray all have in common?
 
-- [ ] Humans
+- [x] Humans
 - [ ] Humans named Bill
 - [ ] Rich humans
-- [ ] Benefactors to charity
+- [x] Benefactors to charity
 
 Which interface should the Nobel Prize, the Turing Award, and the Fields Medal all expose? What methods should this interface have given their differences?
 

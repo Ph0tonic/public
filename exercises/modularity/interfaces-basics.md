@@ -10,21 +10,21 @@ Note that, due to various historical reasons, these classes may not actually imp
 
 Which interface(s) should the classes `ArrayList`, `HashSet`, and `ArrayDeque` all implement?
 
-- [ ] `Iterable`
+- [x] `Iterable`
 - [ ] `Set`
 - [ ] `Queue`
 - [ ] `List`
 
 Which interface(s) should the classes `ArrayList`, `Vector`, and `LinkedList` all implement?
 
-- [ ] `Iterable`
+- [x] `Iterable`
 - [ ] `Set`
 - [ ] `Queue`
-- [ ] `List`
+- [x] `List`
 
 Which interface(s) should the classes `ConcurrentLinkedQueue`, `AbstractSet`, and `Properties` all implement?
 
-- [ ] `Iterable`
+- [x] `Iterable`
 - [ ] `Set`
 - [ ] `Queue`
 - [ ] `List`
@@ -37,14 +37,14 @@ Which interface(s) should the classes `BufferedReader`, `OutputStreamWriter` and
 - [ ] `InputStream`
 - [ ] `Readable`
 - [ ] `Flushable`
-- [ ] `Closeable`
+- [x] `Closeable`
 
 Which interface(s) should the classes `PrintStream`, `OutputStreamWriter` and `FilterWriter` all implement?
 
 - [ ] `InputStream`
 - [ ] `Readable`
-- [ ] `Flushable`
-- [ ] `Closeable`
+- [x] `Flushable`
+- [x] `Closeable`
 
 
 ## Various
@@ -52,13 +52,13 @@ Which interface(s) should the classes `PrintStream`, `OutputStreamWriter` and `F
 Which interface(s) should the classes `Integer`, `Path` and `ZonedDateTime` all implement?
 
 - [ ] `Iterable`
-- [ ] `Comparable`
+- [x] `Comparable`
 - [ ] `Watchable`
-- [ ] `Serializable`
+- [x] `Serializable`
 
 Which interface(s) should the classes `BigDecimal`, `ThaiBuddhistCalendar` and `java.util.regex.Pattern` all implement?
 
 - [ ] `Iterable`
 - [ ] `Comparable`
 - [ ] `Watchable`
-- [ ] `Serializable`
+- [x] `Serializable`
