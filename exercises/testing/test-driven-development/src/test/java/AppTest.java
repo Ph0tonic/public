@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.*;
 
 final class AppTest {
     @Test
-    void onePlusOneIsTwo() {
-        assertThat(1 + 1, is(2));
+    void addTicket() {
+        assertThat(new Shop("Bianca's shop").addTicket(new Ticket), is(2));
     }
 }

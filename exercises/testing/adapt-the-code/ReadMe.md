@@ -82,9 +82,9 @@ class GoogleSignInAdapter implements SignInService {
 
 Now any class that used to directly call `GoogleService` can instead have a `SignInService` as a dependency, so that you can write proper tests, and you can use `GoogleSignInAdapter` for the actual implementation in your app.
 
-We provide [`TreasureFinder.java`](src/main/java/TreasureFinder.java) and [`Geolocator.java`](src/main/java/Geolocator.java).
+We provide [`TreasureFinder.java`](src/main/java/TreasureFinder.java) and [`UserGeolocator.java`](src/main/java/UserGeolocator.java).
 The `TreasureFinder` determines how close the user is to a treasure.
-However, it currently cannot be tested properly because `Geolocator` does not implement any interfaces and uses the real location of the user.
+However, it currently cannot be tested properly because `UserGeolocator` does not implement any interfaces and uses the real location of the user.
 Furthermore, `TreasureFinder` must have a parameterless constructor, because of external requirements.
 Refactor `TreasureFinder` so that it can be tested with a fake location service, and write tests for it.
 

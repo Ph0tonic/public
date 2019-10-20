@@ -1,5 +1,7 @@
 package ch.epfl.sweng.defensive.param.check.tinyc.type;
 
+import ch.epfl.sweng.defensive.param.check.tinyc.fault.SegmentationFault;
+
 import java.util.Random;
 
 public class cstring {
@@ -26,7 +28,10 @@ public class cstring {
     return chars[index];
   }
 
-  public void set(int index, char value) {
+  public void set(int index, char value) throws SegmentationFault {
+    if (index < 0 || index >= chars.length) {
+      throw new SegmentationFault();
+    }
     chars[index] = value;
   }
 }

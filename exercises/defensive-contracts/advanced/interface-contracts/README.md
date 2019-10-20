@@ -1,4 +1,5 @@
 # [Covariance and contravariance](https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science))
+
 Inheritance can be treated, from the contractual point of view, as the obligation of the subclass to respect the contracts of the superclass.
 So a `SwEngStudent` is first of all a `Student`.
 This means you can always treat a `SwEngStudent` as if it were a student, i.e., you can ask for their `gaspar`, or expect them to take an exam.

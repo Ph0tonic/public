@@ -1,14 +1,7 @@
 public class TreasureFinder {
-    private final Geolocator geolocator;
-
-    // There MUST be a parameterless constructor,
-    // it is used by our Super-Fancy-Framework-That-Does-Not-Support-Parameters™
-    public TreasureFinder() {
-        geolocator = new Geolocator();
-    }
 
     public String getHint(Position treasurePos) {
-        Position userPos = geolocator.getUserPosition();
+        Position userPos = GeolocatorFactory.getDependency().getPosition();
         if (userPos.latitude > 70) {
             return "Nope, the treasure is not at the North Pole.";
         }

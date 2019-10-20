@@ -1,5 +1,6 @@
 package ch.epfl.sweng.defensive.neutral.returned.value;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 import ch.epfl.sweng.defensive.neutral.returned.value.goolge.Goolge;
@@ -12,12 +13,12 @@ public class Main {
         String line = scanner.nextLine().trim();
         if (!line.isEmpty()) {
             String[] keywords = line.split(" ");
-            Result result = Goolge.search(keywords);
-            while (result != null) {
+            Optional<Result> result = Goolge.search(keywords);
+            while (result.isPresent()) {
                 System.out.println(result);
                 System.out.println("...");
                 scanner.nextLine();
-                result = result.next();
+                result = result.get().next();
             }
             System.out.println();
         }

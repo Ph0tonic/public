@@ -8,10 +8,7 @@ public final class App {
             throw new IllegalArgumentException("Distances cannot be negative!");
         }
 
-        int speed = currentSpeed;
-        if (currentSpeed > 200) {
-            speed = 200;
-        }
+        int speed = Math.min(currentSpeed, 200);
 
         if (distanceToNextCar * currentSpeed < 5) {
             speed = speed / 2;
@@ -43,8 +40,8 @@ public final class App {
         }
 
         switch (discount) {
-            case LARGE:
-                return originalPrice / 100 * 70;
+//            case LARGE:
+//                return originalPrice / 100 * 70;
             case SMALL:
                 return originalPrice / 100 * 90;
             default:

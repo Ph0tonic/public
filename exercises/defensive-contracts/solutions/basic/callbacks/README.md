@@ -2,7 +2,9 @@
 
 ### Defining a Callback interface
 
-The callback interface provided as an example in the exercise statement is the very same one we use for the exercise solution. A callback defines two methods: 1) one method invoked on success along with the return value; 2) one method invoked on error along with error, an exception in the.
+The callback interface provided as an example in the exercise statement is the very same one we use for the exercise solution. A callback defines two methods:
+1. one method invoked on success along with the return value;
+2. one method invoked on error along with error, an exception in the.
 
 ```java
 public interface Callback<T> {
