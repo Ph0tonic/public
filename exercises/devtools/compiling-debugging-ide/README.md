@@ -1,4 +1,5 @@
 # Exercise 4: Compiling and Debugging in the IDE
+
 In this exercise, we will use the IntelliJ IDE to apply what we have learned in [ex2](../ex2/README.md).
 
 For Java and Android development, developers are inclined to use IDEs. The reason is that IDEs come with a lot of components that help you to develop code easily such as syntax highlighting, code completion, compilation support, etc.
@@ -41,7 +42,8 @@ public class TestProgram {
 }
 ```
 
-4. Right-click to the `TestProgram` file and select *Run TestProgram.main()* which will compile and run the program for you. You can run any class that has a main method this way.
+4. Right-click on the project folder and select the `Build Module` entry.
+5. Right-click on the `TestProgram` file and select *Run TestProgram.main()* which will compile and run the program for you. You can run any class that has a main method this way.
 
 
 ## Exercise 4.2: The Debugger

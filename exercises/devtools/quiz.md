@@ -10,7 +10,7 @@ Which of the following attributes of a software system are not among the key pro
 - [ ] Manageability
 - [ ] Reliability
 
-How many lines of code (LOC) are in the software of systems like the Boeing 767 avionics or o modern premium automobile?
+How many lines of code (LOC) are in the software of systems like the Boeing 767 avionics or a modern premium automobile?
 
 - [ ] Thousands
 - [ ] Tens of thousands
@@ -38,13 +38,6 @@ Which statements are correct regarding tests and proofs?
 - [ ] Testing is slow because the result of each test has to be inspected for correctness
 - [ ] Proof techniques can verify programs with respect to low-level properties (such as division by zero) 
 - [ ] Proof techniques can verify higher-level properties (so called functional properties) 
-
-For sel4, how did the overall effort involved in proving corectness compare to the effort of writing the actual code of the kernel?
-
-- [ ] Roughly the same effort
-- [ ] Writing the code took 10x more effort than generating the proof
-- [ ] Generating the proof took 10x more effort than writing the code
-- [ ] Generating the proof took 100x more effort than writing the code 
 
 Is it possible to have a program with an infinite number of paths?
 
@@ -84,31 +77,6 @@ An earlier version of this class had a different type of project. The SwEng home
 - [ ] Block approach
 - [ ] Agile approach 
 - [ ] None of the above
-
-## Developer Tools
-
-Suppose we have the following C source code, in test.c: 
-
-```c
-#include <stdio.h>
-int main() { printf("Hello World!"); return 0; }
-```
-
-If we launch 'gcc -o test test.c', which creates the executable, which tools did we use:
-
-- [ ] Compiler 
-- [ ] Preprocessor 
-- [ ] Debugger
-- [ ] Builder
-- [ ] Linker 
-- [ ] Profiler
-
-Choose the correct order of the software building steps:
-
-- [ ] link, compile, preprocess, write code
-- [ ] preprocess, write code, compile, link
-- [ ] write code, preprocess, compile, link 
-- [ ] write code, preprocess, link, compile
 
 ## Version Control Systems
 
