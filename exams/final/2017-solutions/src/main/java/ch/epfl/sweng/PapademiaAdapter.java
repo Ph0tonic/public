@@ -43,8 +43,8 @@ public final class PapademiaAdapter {
         // Same remark as in `getUsers` regarding referential equality.
         return courses.parallelStream().filter(Objects::nonNull).map(c ->
                 new Course(c.name,
-                        users.parallelStream().filter(u -> u.taughtCourses.contains((c))).map(u -> u.name).map(User::new).collect(Collectors.toList()),
-                        users.parallelStream().filter(u -> u.attendedCourses.contains((c))).map(u -> u.name).map(User::new).collect(Collectors.toList())
+                        users.parallelStream().filter(Objects::nonNull).filter(u -> u.taughtCourses.contains((c))).map(u -> u.name).map(User::new).collect(Collectors.toList()),
+                        users.parallelStream().filter(Objects::nonNull).filter(u -> u.attendedCourses.contains((c))).map(u -> u.name).map(User::new).collect(Collectors.toList())
                 )
         ).collect(Collectors.toList());
     }
