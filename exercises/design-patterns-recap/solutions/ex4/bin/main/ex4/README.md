@@ -1,4 +1,4 @@
-# Solution Exercise 2
+# Exercise 4
 
 Here, the design pattern to use is the Adapter.
 Indeed, we would like to use a relational database (`DatabaseImpl`) without changing all the places in the code that use a key-value store (`KeyValueStoreImpl`).

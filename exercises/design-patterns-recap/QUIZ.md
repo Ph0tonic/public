@@ -2,10 +2,10 @@
 
 Which of the following examples are likely to implement the Observer Design Pattern or the callback/listener? Select all that apply.
 
-- [ ] Push notifications 
-- [ ] android.widget.TextView and android.text.TextWatcher 
+- [x] Push notifications 
+- [x] android.widget.TextView and android.text.TextWatcher 
 - [ ] java.util.concurrent.ThreadPoolExecutor.execute(java.lang.Runnable command)
-- [ ] Collaborative Office-like tools
+- [x] Collaborative Office-like tools
 
 ### Question 2
 
@@ -13,7 +13,7 @@ Imagine you have an application for managing a telephone directory through a web
 
 Of the following four design patterns, which would you say is the one implemented in the `Person` class?
 
-- [ ] Adapter
+- [x] Adapter
 - [ ] Proxy
 - [ ] Composite
 - [ ] Decorator
@@ -22,7 +22,7 @@ Of the following four design patterns, which would you say is the one implemente
 
 An example of the composite design pattern is a tree of menus and menu items; a tree is by definition acyclic. Is it possible to get cyclic data structures when employing the Composite design pattern?
 
-- [ ] yes
+- [x] yes
 - [ ] no
 
 ### Question 4
@@ -33,7 +33,7 @@ How would you need to change the `NodeVisitor` class to achieve functionality si
 
 - [ ] Not possible, since without the `accept()` method one cannot visit all elements
 - [ ] Call `visit(lhs)` and `visit(rhs)`, or `visit(op1)` and `visit(op2)`, to visit the sub-elements of an operation
-- [ ] Identify the type of the sub-elements and call the appropriate methods, such as `visit((VariableNode)lhs)` or `visit((NumberLiteralNode)lhs)`
+- [x] Identify the type of the sub-elements and call the appropriate methods, such as `visit((VariableNode)lhs)` or `visit((NumberLiteralNode)lhs)`
 
 ### Question 5
 
@@ -73,7 +73,6 @@ public class MyArrayList<T> implements Iterable<T>{
         public void remove() {
             throw new UnsupportedOperationException();
         }
-
     }
 
     @Override
@@ -99,7 +98,7 @@ public class TestList {
 }
 ```
 
-- [ ] Iterating over a list of 10,000 elements takes twice as much time as iterating over a list of 5,000 elements
+- [x] Iterating over a list of 10,000 elements takes twice as much time as iterating over a list of 5,000 elements
 - [ ] Iterating over a list of 10,000 elements takes four times as much time as iterating over a list of 5,000 elements
-- [ ] Determining if the iterator reached the end of the list takes a fixed amount of time on each iteration in the `next()` method
-- [ ] Accessing the item at the current position of the iterator takes a fixed amount of time
+- [x] Determining if the iterator reached the end of the list takes a fixed amount of time on each iteration in the `next()` method
+- [x] Accessing the item at the current position of the iterator takes a fixed amount of time

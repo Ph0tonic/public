@@ -123,7 +123,7 @@ You should also modify the existing code to implement the Visitor pattern and us
 
 After this code is implemented and tested, you should merge it back into the `master` branch.
 
-##Your (sub-)tasks
+## Your (sub-)tasks
 
 1. Create a branch called `visitor` from the `master` branch.
 2. Switch to that branch.
@@ -142,7 +142,7 @@ In this final task, you will merge the iterator branch into the master and resol
 
 The merged code must use the Iterator pattern for `NameBook.printFriendships` and use the Visitor pattern for `Graph.getAllNodes`.
 
-##Your (sub-)tasks
+## Your (sub-)tasks
 
 1. Switch to the `master` branch.
 2. Merge in the `iterator` branch.

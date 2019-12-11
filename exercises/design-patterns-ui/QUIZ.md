@@ -4,7 +4,7 @@
 
 What Object-Oriented Progamming feature makes the original GOF Factory Method pattern possible? Select one.
 
-- [ ] Polymorphism
+- [x] Polymorphism
 - [ ] Encapsulation
 - [ ] Interfaces
 - [ ] Static methods
@@ -12,16 +12,16 @@ What Object-Oriented Progamming feature makes the original GOF Factory Method pa
 Which of the following statements are true? Select all that apply.
 
 - [ ] Both the Static Factory Method and original GOF Factory Method are meant to control the number of instances that exist in a system
-- [ ] The GOF Factory Method can return different types of objects (subtypes of a common base class), while the Static Factory Method returns the same type of object
-- [ ] The Static Factory Method and original GOF Factory Method serve different purposes
+- [x] The GOF Factory Method can return different types of objects (subtypes of a common base class), while the Static Factory Method returns the same type of object
+- [x] The Static Factory Method and original GOF Factory Method serve different purposes
 - [ ] The Static Factory Method and original GOF Factory Method are two alternative implementations of the same concept
-- [ ] In the original GOF Factory Method, the "createObject" method that instantiates an member of a class should never be static
+- [x] In the original GOF Factory Method, the "createObject" method that instantiates a member of a class should never be static
 
 ## Abstract Factory Design Pattern
 
 What are the tradeoffs of the Abstract Factory Pattern? Select all that apply.
 
-- [ ] It's hard to add or remove products
+- [x] It's hard to add or remove products
 - [ ] It's hard to add or remove factories
 - [ ] It's hard to switch between product families
 - [ ] It's hard to write unit tests
@@ -43,7 +43,6 @@ public class SwengHttpClientFactory {
     public static synchronized void setInstance(AbstractHttpClient instance) {
         httpClient = instance;
     }
-...
 ```
 
 Which of the following statements are true regarding this design? Select all that apply.
@@ -51,12 +50,12 @@ Which of the following statements are true regarding this design? Select all tha
 - [ ] This is a standard example of the original GOF factory
 - [ ] This is a standard example of the static factory method
 - [ ] This is a standard example of Singleton
-- [ ] The class allows switching the concrete HttpClient returned
+- [x] The class allows switching the concrete HttpClient returned
 - [ ] The SwengHttpClientFactory decides what type of HttpClient to return
 
 Suppose you implement an iPhone game that uses [AirPlay](http://en.wikipedia.org/wiki/AirPlay) mirroring to display the image both on the phone's screen and on an external display. Thus, your code needs to manage two screens. Is the display manager of your application a good use case for the Singleton Design Pattern?
 
-- [ ] Yes
+- [x] Yes
 - [ ] No
 
 ## Inheritance vs Proxy vs Adapter
@@ -66,7 +65,7 @@ Imagine you're writing an application that analyzes Facebook users' messages usi
 Of the following four options, which is the one most effective way of building the desired application?
 
 - [ ] Write an `NLPFacebookPost` class that subclasses `FacebookPost` and also implements `NLPDocument`'s interface, then change the NLP library to accept `NLPFacebookPost` objects instead of `NLPDocument` objects.
-- [ ] Write a `FacebookPostNLPDocumentAdapter` class that adapts the interface of `FacebookPost` to the `NLPDocument` interface
+- [x] Write a `FacebookPostNLPDocumentAdapter` class that adapts the interface of `FacebookPost` to the `NLPDocument` interface
 - [ ] Write an `NLPDocumentFacebookPostAdapter` class that adapts the interface of `NLPDocument` to the `FacebookPost` interface
 - [ ] Use the Proxy design pattern to make `FacebookPost` objects behave like `NLPDocument` objects
 
@@ -106,6 +105,6 @@ class WebApplication {
 Which of the following statements is (are) true?
 
 - [ ] `StudentsDatabase` is the model, `StudentsManager` is the controller, and `WebApplication` is the the view.
-- [ ] `StudentsDatabase` is the model, `StudentsManager` is the view, and `WebApplication` is the controller.
+- [x] `StudentsDatabase` is the model, `StudentsManager` is the view, and `WebApplication` is the controller.
 - [ ] `StudentsManager` is the model, `StudentsDatabase` is the view, and `StudentsManager` is the controller.
 - [ ] This is not MVC, because `StudentsManager` must use a listener to be notified when the database changes.

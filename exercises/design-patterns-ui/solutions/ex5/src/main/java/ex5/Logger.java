@@ -1,15 +1,15 @@
 package ex5;
 
 public class Logger {
-    private static final Logger instance = new Logger();
+    private static final Logger INSTANCE = new Logger();
 
     private Logger() {
-        if (instance != null)
+        if (INSTANCE != null)
             throw new IllegalStateException("Already instantiated");
     }
 
     public static Logger getInstance() {
-        return instance;
+        return INSTANCE;
     }
 
     protected void print() {

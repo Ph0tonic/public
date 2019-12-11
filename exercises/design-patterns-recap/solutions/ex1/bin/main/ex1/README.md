@@ -1,4 +1,4 @@
-# DP1 / Exercise 3
+# Exercise 1
 
 You are now in charge of displaying some statistics such as the number of loans made each day. Currently, the statistics are stored in a `DataStore`. You are able to show these info on your `Phone` and computer `Screen` using the following code:  
 
